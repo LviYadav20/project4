@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | FreelanceHub</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+            <span>FreelanceHub</span>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="services.html">Services</a></li>
+
+                <li><a href="freelancers.html">Freelancers</a></li>
+
+                <li><a href="projects.html">Projects</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= REGISTER SECTION ================= -->
+
+    <section class="login-page">
+
+        <div class="login-container">
+
+            <!-- Left Image -->
+
+            <div class="login-image">
+
+                <img src="images/register.png" alt="Register">
+
+            </div>
+
+            <!-- Register Form -->
+
+            <div class="login-form">
+
+                <h2>Create Your Account</h2>
+
+                <p>Join FreelanceHub and start your freelancing journey.</p>
+
+                <form id="registerForm">
+
+                    <!-- User Type -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <select id="userType" required>
+
+                            <option value="">Select Account Type</option>
+
+                            <option>Freelancer</option>
+
+                            <option>Client</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Full Name -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Full Name"
+                            required>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email Address"
+                            required>
+
+                    </div>
+
+                    <!-- Phone -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Phone Number"
+                            required>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Password"
+                            required>
+
+                        <span id="togglePassword">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+
+                    <!-- Confirm Password -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm Password"
+                            required>
+
+                        <span id="toggleConfirm">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </span>
+
+                    </div>
+                                        <!-- Skills -->
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <input
+                            type="text"
+                            id="skills"
+                            placeholder="Skills (Example: HTML, CSS, Java)"
+                            required>
+
+                    </div>
+
+                    <!-- Terms -->
+
+                    <div class="remember">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required>
+
+                            I agree to the Terms & Conditions
+
+                        </label>
+
+                    </div>
+
+                    <!-- Register Button -->
+
+                    <button type="submit">
+
+                        Create Account
+
+                    </button>
+
+                    <!-- Login Link -->
+
+                    <p class="register-link">
+
+                        Already have an account?
+
+                        <a href="login.html">
+
+                            Login Here
+
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 FreelanceHub. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+    <script>
+
+        // Password Toggle
+
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+
+        togglePassword.onclick = function () {
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                togglePassword.innerHTML =
+                    "<i class='fa-solid fa-eye-slash'></i>";
+
+            } else {
+
+                password.type = "password";
+
+                togglePassword.innerHTML =
+                    "<i class='fa-solid fa-eye'></i>";
+
+            }
+
+        };
+
+        // Confirm Password Toggle
+
+        const toggleConfirm = document.getElementById("toggleConfirm");
+        const confirmPassword = document.getElementById("confirmPassword");
+
+        toggleConfirm.onclick = function () {
+
+            if (confirmPassword.type === "password") {
+
+                confirmPassword.type = "text";
+
+                toggleConfirm.innerHTML =
+                    "<i class='fa-solid fa-eye-slash'></i>";
+
+            } else {
+
+                confirmPassword.type = "password";
+
+                toggleConfirm.innerHTML =
+                    "<i class='fa-solid fa-eye'></i>";
+
+            }
+
+        };
+
+        // Registration Validation
+
+        document.getElementById("registerForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const name =
+                    document.getElementById("name").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const phone =
+                    document.getElementById("phone").value.trim();
+
+                const pass =
+                    document.getElementById("password").value;
+
+                const confirm =
+                    document.getElementById("confirmPassword").value;
+
+                const terms =
+                    document.getElementById("terms").checked;
+
+                if (name === "" || email === "" || phone === "") {
+
+                    alert("Please fill all required fields.");
+
+                    return;
+
+                }
+
+                if (pass.length < 6) {
+
+                    alert("Password must be at least 6 characters.");
+
+                    return;
+
+                }
+
+                if (pass !== confirm) {
+
+                    alert("Passwords do not match.");
+
+                    return;
+
+                }
+
+                if (!terms) {
+
+                    alert("Please accept the Terms & Conditions.");
+
+                    return;
+
+                }
+
+                alert("Registration Successful!");
+
+                window.location.href = "login.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
